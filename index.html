@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html><head><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/><meta name="Copyright" content="fanqie"/><meta charset="UTF-8"><title>番茄即将来临...</title><style type="text/css">
-   html {height:100%;background:#fff url() no-repeat -80px 186%;background-size:50%}*{padding:0;margin:0}body{height:100%;-webkit-user-select: none;-webkit-text-size-adjust:none;position:relative;margin:0 auto;width:100%;}h2{text-align:center;color:#000;font-size:4em;padding:150px 0 50px}
+   html {height:100%;background:#fff url() no-repeat -80px 186%;background-size:50%}*{padding:0;margin:0}body{height:100%;-webkit-user-select: none;-webkit-text-size-adjust:none;position:relative;margin:0 auto;width:100%;}
+   h3{text-align:center;color:#000;font-size:4em;padding:150px 0 50px}
+   #container {width:1000px;height:380px;margin:50px auto;padding:150px 0 0 0;text-align: center;}
+h2 {position: relative;font:100px Helvetica, Sans-Serif;letter-spacing: -5px;color: rgba(0,0,255,0.5);}	
+	h2:after {content: "COMING SOON";position: absolute; left:167px; top: 5px;color: rgba(255,0,0,0.5);}
+h1{text-align: center;padding-top:30px;color:#777;font-weight:100;font-size:26px}
    canvas{position:fixed;top:0;left:0;z-index:0;width:100%;height:100%;pointer-events:none;z-index:-2}
-    </style></head><body><h2>COMING SOON</h2><canvas></canvas><script>
+    </style></head><body><div id="container"><h2>COMING SOON</h2><h1>番茄留学公寓</h1></div><canvas></canvas><script>
             var c=document.getElementsByTagName("canvas")[0],x=c.getContext("2d"),pr=window.devicePixelRatio,w=window.innerWidth,h=window.innerHeight,f=100,q,m=Math,r=0,u=2*m.PI,v=m.cos,z=m.random;c.width=w*pr;c.height=h*pr;x.scale(pr,pr);x.globalAlpha=.5;function i(){x.clearRect(0,0,w,h);for(q=[{x:0,y:.7*h+f},{x:0,y:.7*h-f}];q[1].x<w+f;)d(q[0],q[1])}
 function d(b,a){x.beginPath();x.moveTo(b.x,b.y);x.lineTo(a.x,a.y);var e=a.x+(2*z()-.5)*f,g=y(a.y);x.lineTo(e,g);x.closePath();r-=u/-50;x.fillStyle="#"+(127*v(r)+128<<16|127*v(r+u/3)+128<<8|127*v(r+u/3*2)+128).toString(16);x.fill();q[0]=q[1];q[1]={x:e,y:g}}function y(b){var a=b+(2*z()-1.1)*f;return a>h||0>a?y(b):a}document.onclick=i;document.ontouchstart=i;i();
 </script></body></html>
