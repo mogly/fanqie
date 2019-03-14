@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <head>
-<title>Pace Calculator</title>
+<title>XIYI Tech</title>
 <style>
-body{margin:0;padding: 0}
+body{margin:0;padding:0;font-family:Hiragino Sans GB,Microsoft YaHei UI,Microsoft YaHei,Microsoft JhengHei,sans-serif}
 svg {
     overflow: hidden;
 }
 
 .world{
-	text-align: center;
-	width: 90%;
-	margin: auto
+  text-align: center;
+  width: 90%;
+  margin: auto
 }
 .world circle {
     fill: #1fa2ff;
@@ -19,39 +19,19 @@ svg {
 .vbg{position:relative;background-color:#25ddf5}
 #xcbg,#xcbg span{position:absolute}#xcbg{width:100%;height:100%;overflow:hidden;-webkit-transform:skewY(-10deg);transform:skewY(-10deg);-webkit-transform-origin:0;transform-origin:0;background:linear-gradient(150deg,#53f 15%,#05d5ff 70%,#a6ffcb 94%)}#xcbg span{height:40px}#xcbg :first-child{width:50%;left:50%;top:40px;background:#4c29ff}#xcbg :nth-child(2){width:14%;right:0;bottom:40px;background:#2be7ff}#xcbg :nth-child(3){width:25%;bottom:0;right:0;background:#a1ffc8}@media (min-width:670px){#xcbg span{height:150px}#xcbg :first-child{top:0;background:#4750ff}#xcbg :nth-child(2){width:16.66667%;top:300px;bottom:auto;background:#0dcfff}#xcbg :nth-child(3){width:33.33333%;right:auto;background:#11bdff}}@media (min-width:880px){#xcbg span{height:190px}#xcbg :first-child{width:33.33333%;left:-16.66666%;background:#53f}#xcbg :nth-child(2){width:33.33333%;top:0;left:16.66666%;right:auto;background:#4553ff}#xcbg :nth-child(3){width:33.33333%;left:49.99999%;bottom:auto;background:#4f40ff}#xcbg :nth-child(4){width:33.33333%;top:380px;right:-16.66666%;background:#25ddf5}#xcbg :nth-child(5){width:33.33333%;bottom:0;background:#1fa2ff}}
 .layout{
-	text-align: center;
-	width: 100%;
-	position: fixed;
-	left: 0;
-	top: 50%;
-	margin-top: -150px;
-	color: #fff;
-	font-size: 2em
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  margin-top: -150px;
+  color: #fff;
+  font-size: 2em
 }
 
-@font-face {font-family: "iconfont";
-  src: url('//at.alicdn.com/t/font_1011261_4yfsssamz8u.eot?t=1547189461878'); /* IE9 */
-  src: url('//at.alicdn.com/t/font_1011261_4yfsssamz8u.eot?t=1547189461878#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAALAAAsAAAAABngAAAJxAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqBBIElATYCJAMICwYABCAFhG0HLhvJBRHVk0tkPxKys4XbZEUx10T7aJwJorKlPbt7r9WdkMAMFKoc5C5nLmccAVOoyHCbcz24GhWhRnL2yQ81peVll+UpAA6uqV8DGkge0FwqwxojAQc2HWhkkm0oA98wdsEL3AwBXNIoQXqeIyZgMdi9BJAVbvFcbMGLwbCERQg0TDTIGRysOqpuAaej78tPqsSCwtHYA8cs6l1Axxe+oPf4e5gRIPhAgNMdQAMlgAGZ0BgdhUYYWeNGDVlwrFSBL/h+oEeOqkHYX2cnhwCQArnPxPP4j5qsADBJcz4wZNJxoAKZyz083MXdpMkTnzxRjx51jx/3T5+OHnzYoyfDkxfj04/944mTbzcOubhqyIXBBa2X7g+L75qeXjX07JhpA/rGjeuAwwrYPjf7GUPkwMnH26q3Vf6pnDVzw5bItoUHl+9tqj0zaVRl1ci4PjoA8C/p67r3JIDAuc07m2aHtwxazwDwbNbMx5Hbv2QYZgd7Gr3wu3gDq4whsHXKaLxGuyJ/Uk8FuLiAD3ZG8WaqMvbezIIt8BgogkgFjSUHNaQScPCogQCWdnAppn+6RzTr0IgJBoo4CECI4DwowrgEmghuo4b0Ghzi+A0BIkSDyySJXtAjTxynboyT4ArzH9xCm3YNouLUBs07TpwXRJQB+XABKLOinHjhhrzEkONjKhENminBE2yHMRLsTB4XyazIXue5bnpTtlA6KboZJ8EV5j+4hTYdNBZV+XyD5h0n7sirMw/Ih2sdyqwYgL6k26C8R7nm+JhKRINmSvAE7TBGgr25ncdFMjshvNe5U08PlWbby9MP5LAibJUSJ1dj1hNtpxMAAAA=') format('woff2'),
-  url('//at.alicdn.com/t/font_1011261_4yfsssamz8u.woff?t=1547189461878') format('woff'),
-  url('//at.alicdn.com/t/font_1011261_4yfsssamz8u.ttf?t=1547189461878') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
-  url('//at.alicdn.com/t/font_1011261_4yfsssamz8u.svg?t=1547189461878#iconfont') format('svg'); /* iOS 4.1- */
-}
-
-.iconfont {
-  font-family: "iconfont" !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-soon:before {
-  content: "\e600";
-}
-.icon-soon{color: #fff;font-size:120px}
 .logo{text-align: center;}
 .logo img{height: 100px}
+.mail{width: 100%;text-align: center;height: 35px;line-height: 35px;font-style: 14px; color: #fff;position: fixed;left: 0;bottom: 5px;}
 </style>
 </head>
 <body>
@@ -67,8 +47,9 @@ svg {
     </div><div style="height:100vh;"></div>
 </div>
 <div class="layout">
-	<div class="logo"><img src="https://raw.githubusercontent.com/mogly/xiyi/gh-pages/lizardtech.png" alt="XIYI Tech"></div>
-	<h2>coming soon...</h2></div>
+  <div class="logo"><img src="https://raw.githubusercontent.com/mogly/xiyi/gh-pages/lizardtech.png" alt="XIYI Tech"></div>
+  <h2>coming soon...</h2></div>
 
+<div class="mail">hello@xiyi-tech.com</div>
 </body>
 </html>
