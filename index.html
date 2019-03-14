@@ -1,29 +1,74 @@
 <!DOCTYPE html>
-<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/><meta name="Copyright" content="fanqie"/><meta charset="UTF-8"><title>番茄留学公寓</title><style type="text/css">
-   html {height:100%}*{padding:0;margin:0}
-   body{height:100%;-webkit-user-select: none;-webkit-text-size-adjust:none;position:relative;margin:0 auto;width:100%;background:#111f39 url(http://odhnk3i3u.bkt.clouddn.com/soon.jpg) center/cover no-repeat;}
-   h1{text-align:center;padding:20% 0 50px;color:#fff;font-size:3.5em;text-shadow:2px 0 3px #666;line-height:1.5em;font-family:"Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif}
-    #contact{width:100%;height:20px;text-align:center;color:#999;position:fixed;bottom:20px;left:0}
-    </style>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?45801b00adc7dadbe891ac280d302b68";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-</head><body>
-<h1>Funliving Coming Soon...</h1>
-<div id="contact">hello@funliving.com</div>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<head>
+<title>Pace Calculator</title>
+<style>
+body{margin:0;padding: 0}
+svg {
+    overflow: hidden;
+}
 
-  ga('create', 'UA-83286239-1', 'auto');
-  ga('send', 'pageview');
-</script>
-</body></html>
+.world{
+	text-align: center;
+	width: 90%;
+	margin: auto
+}
+.world circle {
+    fill: #1fa2ff;
+}
+
+.vbg{position:relative;background-color:#25ddf5}
+#xcbg,#xcbg span{position:absolute}#xcbg{width:100%;height:100%;overflow:hidden;-webkit-transform:skewY(-10deg);transform:skewY(-10deg);-webkit-transform-origin:0;transform-origin:0;background:linear-gradient(150deg,#53f 15%,#05d5ff 70%,#a6ffcb 94%)}#xcbg span{height:40px}#xcbg :first-child{width:50%;left:50%;top:40px;background:#4c29ff}#xcbg :nth-child(2){width:14%;right:0;bottom:40px;background:#2be7ff}#xcbg :nth-child(3){width:25%;bottom:0;right:0;background:#a1ffc8}@media (min-width:670px){#xcbg span{height:150px}#xcbg :first-child{top:0;background:#4750ff}#xcbg :nth-child(2){width:16.66667%;top:300px;bottom:auto;background:#0dcfff}#xcbg :nth-child(3){width:33.33333%;right:auto;background:#11bdff}}@media (min-width:880px){#xcbg span{height:190px}#xcbg :first-child{width:33.33333%;left:-16.66666%;background:#53f}#xcbg :nth-child(2){width:33.33333%;top:0;left:16.66666%;right:auto;background:#4553ff}#xcbg :nth-child(3){width:33.33333%;left:49.99999%;bottom:auto;background:#4f40ff}#xcbg :nth-child(4){width:33.33333%;top:380px;right:-16.66666%;background:#25ddf5}#xcbg :nth-child(5){width:33.33333%;bottom:0;background:#1fa2ff}}
+.layout{
+	text-align: center;
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 50%;
+	margin-top: -150px;
+	color: #fff;
+	font-size: 2em
+}
+
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_1011261_4yfsssamz8u.eot?t=1547189461878'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_1011261_4yfsssamz8u.eot?t=1547189461878#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAALAAAsAAAAABngAAAJxAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqBBIElATYCJAMICwYABCAFhG0HLhvJBRHVk0tkPxKys4XbZEUx10T7aJwJorKlPbt7r9WdkMAMFKoc5C5nLmccAVOoyHCbcz24GhWhRnL2yQ81peVll+UpAA6uqV8DGkge0FwqwxojAQc2HWhkkm0oA98wdsEL3AwBXNIoQXqeIyZgMdi9BJAVbvFcbMGLwbCERQg0TDTIGRysOqpuAaej78tPqsSCwtHYA8cs6l1Axxe+oPf4e5gRIPhAgNMdQAMlgAGZ0BgdhUYYWeNGDVlwrFSBL/h+oEeOqkHYX2cnhwCQArnPxPP4j5qsADBJcz4wZNJxoAKZyz083MXdpMkTnzxRjx51jx/3T5+OHnzYoyfDkxfj04/944mTbzcOubhqyIXBBa2X7g+L75qeXjX07JhpA/rGjeuAwwrYPjf7GUPkwMnH26q3Vf6pnDVzw5bItoUHl+9tqj0zaVRl1ci4PjoA8C/p67r3JIDAuc07m2aHtwxazwDwbNbMx5Hbv2QYZgd7Gr3wu3gDq4whsHXKaLxGuyJ/Uk8FuLiAD3ZG8WaqMvbezIIt8BgogkgFjSUHNaQScPCogQCWdnAppn+6RzTr0IgJBoo4CECI4DwowrgEmghuo4b0Ghzi+A0BIkSDyySJXtAjTxynboyT4ArzH9xCm3YNouLUBs07TpwXRJQB+XABKLOinHjhhrzEkONjKhENminBE2yHMRLsTB4XyazIXue5bnpTtlA6KboZJ8EV5j+4hTYdNBZV+XyD5h0n7sirMw/Ih2sdyqwYgL6k26C8R7nm+JhKRINmSvAE7TBGgr25ncdFMjshvNe5U08PlWbby9MP5LAibJUSJ1dj1hNtpxMAAAA=') format('woff2'),
+  url('//at.alicdn.com/t/font_1011261_4yfsssamz8u.woff?t=1547189461878') format('woff'),
+  url('//at.alicdn.com/t/font_1011261_4yfsssamz8u.ttf?t=1547189461878') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//at.alicdn.com/t/font_1011261_4yfsssamz8u.svg?t=1547189461878#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-soon:before {
+  content: "\e600";
+}
+.icon-soon{color: #fff;font-size:120px}
+.logo{text-align: center;}
+.logo img{height: 100px}
+</style>
+</head>
+<body>
+
+
+<div class="vbg">
+    <div id="xcbg">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div><div style="height:100vh;"></div>
+</div>
+<div class="layout">
+	<div class="logo"><img src="lizardtech.png" alt="XIYI Tech"></div>
+	<h2>coming soon...</h2></div>
+
+</body>
+</html>
